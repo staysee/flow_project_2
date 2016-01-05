@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
 
+  #route for our home page
   root 'static_pages#home'
+  #route for an about page
   get 'static_pages/about'
 
+  #route to users index page - list of all users
   get 'users/' => 'users#index', as: :users
-  #route to sign up form
+  #route to users sign up form
   get 'users/new' => 'users#new', as: :new_user
-  #route to show page
+  #route to users show/profile page
   get 'users/:id' => 'users#show', as: :user
   #route to post user form to
   post '/' => 'users#create'
