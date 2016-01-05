@@ -1,0 +1,10 @@
+<h1>Flow Events</h1>
+<p> Here are a list of all classes, workshops, spin jams, or festivals posted by your flow community! </p>
+
+<ul class="events">
+  <% @events.each do |event| %>
+    <li>
+      <%= link_to event.name, event %>
+    </li>
+  <% end %>
+</ul>

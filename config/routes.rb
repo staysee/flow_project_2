@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   #route to post user form to
   post '/' => 'users#create'
 
+  resources :users
+
 
   # SESSIONS ROUTES
   #display form
@@ -28,5 +30,19 @@ Rails.application.routes.draw do
 
   get 'targets/' => 'targets#index', as: :targets
 
-  resources :users
+
+  # EVENTS ROUTES
+  #route to events index page - list of all events
+  get 'events/' => 'events#index', as: :events
+  #route to individual event page
+  get 'events/:id' => 'events#show', as: :event
+  #route to form for creating a new event
+  get 'events/new' => 'events#new', as: :new_event
+  #create a new event
+  post 'events/' => 'events#create'
+
+  namespace :api do
+    resources :events, only:[:index, :show]
+  end
+
 end

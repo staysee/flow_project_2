@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :users
 
   before_save { self.email = email.downcase }
 
