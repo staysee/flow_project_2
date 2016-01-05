@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
 
-  root 'users#index', as: :users
+  root 'static_pages#home'
 
+  get 'users/' => 'users#index', as: :users
   #route to sign up form
   get 'users/new' => 'users#new', as: :new_user
+  #route to show page
+  get 'users/:id' => 'users#show', as: :user
   #route to post user form to
   post '/' => 'users#create'
 
