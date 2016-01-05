@@ -36,4 +36,10 @@ Rails.application.routes.draw do
   get 'events/' => 'events#index', as: :events
   #route to individual event page
   get 'events/:id' => 'events#show', as: :event
+
+  #API for event
+  namespace :api do
+    resources :events, only: [:index, :show]
+  end
+
 end
