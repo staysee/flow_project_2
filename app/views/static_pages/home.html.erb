@@ -1,4 +1,9 @@
-<h1>Home Page</h1>
+<% provide(:title, "Home") %>
+
+<h1>Flow Finder</h1>
+
+<p> This is the home page for Flow Finder </p>
+
 
 <% flash.each do |key,value|  %>
     <div class="<%= key %>" > <%= value %> </div>
@@ -12,3 +17,4 @@
     <%= link_to "Register", new_user_path  %>
     <%= link_to "Login", new_session_path %>
 <% end %>
+
