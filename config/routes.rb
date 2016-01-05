@@ -36,4 +36,13 @@ Rails.application.routes.draw do
   get 'events/' => 'events#index', as: :events
   #route to individual event page
   get 'events/:id' => 'events#show', as: :event
+  #route to form for creating a new event
+  get 'events/new' => 'events#new', as: :new_event
+  #create a new event
+  post 'events/' => 'events#create'
+
+  namespace :api do
+    resources :events, only:[:index, :show]
+  end
+
 end
