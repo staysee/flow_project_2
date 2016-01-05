@@ -17,7 +17,7 @@ protected
 
   def authorize
     unless current_user
-      flash[:error] = "you must sign in first to go to thate page"
+      flash[:error] = "you must sign in first to go to that page"
       redirect_to new_session_path
     end
   end

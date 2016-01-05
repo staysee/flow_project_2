@@ -9,10 +9,12 @@ class UsersController < ApplicationController
   end
 
   def create
-    if User.new(user_params).save
+    @user = User.new(user_params)
+    if @user.save
       #redirect to signed in
       flash[:sucess] = 'Welcome to Flow Finder!'
-      redirect_to users_path
+      redirect_to user_path
+
     else
       flash[:error] = 'Registration Fail: Please make sure all fields are entered correctly.'
 
@@ -24,6 +26,19 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      flash[:success] = "Profile updated"
+      redirect_to user_path
+    else
+      render 'edit'
+    end
+  end
 
 
 
