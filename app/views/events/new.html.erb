@@ -1,0 +1,47 @@
+<h1>Post an Event You're Hosting!</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for [@user, Event.new] do |f| %>
+
+      <div class="field form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+
+      <div class="field form-group">
+        <%= f.label :type %>
+        <%= f.text_field :type, class: "form-control" %>
+      </div>
+
+      <div class="field form-group">
+        <%= f.label :description %>
+        <%= f.text_field :description, class: "form-control" %>
+      </div>
+
+      <div class="field form-group">
+        <%= f.label :street%>
+        <%= f.email_field :street, class: "form-control" %>
+      </div>
+
+      <div class="field form_group">
+        <%= f.label :city %>
+        <%= f.password_field :city, class: "form-control" %>
+      </div>
+
+      <div class="field form_group">
+        <%= f.label :state, "Confirmation" %>
+        <%= f.password_field :state, class: "form-control" %>
+      </div>
+
+      <div class="field form_group">
+        <%= f.label :zip_code, "Confirmation" %>
+        <%= f.password_field :zip_code, class: "form-control" %>
+      </div>
+
+      <%= f.submit "Share my event", class: "btn btn-primary form-control" %>
+
+    <% end %>
+  </div>
+</div>
+
