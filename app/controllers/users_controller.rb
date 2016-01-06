@@ -11,14 +11,14 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      #redirect to signed in
+      #auto sign in
+      log_in @user
       flash[:sucess] = 'Welcome to Flow Finder!'
       redirect_to user_path
-
     else
-      flash[:error] = 'Registration Fail: Please make sure all fields are entered correctly.'
-
-      redirect_to new_user_path
+      # flash[:error] = 'Registration Fail: Please make sure all fields are entered correctly.'
+      # redirect_to new_user_path
+      render 'new'
     end
   end
 

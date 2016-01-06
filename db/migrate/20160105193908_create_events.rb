@@ -8,7 +8,7 @@ class CreateEvents < ActiveRecord::Migration
       t.string :city
       t.string :state
       t.integer :zip_code
-      t.string :user_id
+      t.integer :user_id
 
       t.timestamps null: false
     end

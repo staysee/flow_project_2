@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :users
+  has_many :events
 
   before_save { self.email = email.downcase }
 

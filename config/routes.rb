@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   #route for our home page
   root 'static_pages#home'
   #route for an about page
-  get 'static_pages/about' => 'static_pages#about', as: :about
-  get 'static_pages/contact' => 'static_pages#contact', as: :contact
+  get 'about' => 'static_pages#about', as: :about
+  get 'contact' => 'static_pages#contact', as: :contact
 
   # USERS ROUTES
   #route to users index page - list of all users
@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get 'users/new' => 'users#new', as: :new_user
   #route to users show/profile page
   get 'users/:id' => 'users#show', as: :user
+  #route to edit user
+  get 'users/:id/edit' => 'users#edit', as: :edit_user
   #route to post user form to
   post '/' => 'users#create'
 
