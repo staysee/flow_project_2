@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
 
+#Pagination
+gem 'will_paginate', '~> 3.0.7'
+#Pagination
+gem 'bootstrap-will_paginate', '~> 0.0.10'
+# Adding faker
+gem 'faker'
 # Adding boostrap
 gem 'bootstrap-sass', '~> 3.3.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

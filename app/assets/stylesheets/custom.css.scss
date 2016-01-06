@@ -1,14 +1,3 @@
-
-/* success/errors */
-.success {
-    background-color: darkseagreen;
-}
-
-.error {
-    background-color: rosybrown;
-}
-
-
 /* forms */
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
@@ -20,6 +9,8 @@ input, textarea, select, .uneditable-input {
 input {
   height: auto !important;
 }
+
+
 
 #error_explanation {
   color: red;
@@ -35,16 +26,3 @@ input {
     color: $state-danger-text;
   }
 }
-
-/* Users index */
-
-.users {
-  list-style: none;
-  margin: 0;
-  li {
-    overflow: auto;
-    padding: 10px 0;
-    border-bottom: 1px solid $gray-lighter;
-  }
-}
-

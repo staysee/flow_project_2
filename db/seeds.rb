@@ -33,6 +33,11 @@ mabel = User.create(
   profile_image_url: "http://tinyurl.com/zbpj8aa"
   )
 
+20.times do
+  User.create(name: Faker::Name.name, handle: Faker::Internet.user_name, email: Faker::Internet.free_email, password: "password", password_confirmation: "password", profile_image_url: Faker::Avatar.image)
+end
+
+
 event1 = Event.create(
   name: "Glow Flow",
   event_type: "Jam",
@@ -52,3 +57,7 @@ event2 = Event.create(
   state: "FL",
   zip_code: 33312,
   user_id: 2)
+
+30.times do
+  Event.create(name: Faker::Hipster.word, event_type: "Workshop", description: Faker::Hipster.paragraph, street: Faker::Address.street_address, city: Faker::Address.city, state: Faker::Address.state_abbr, zip_code: Faker::Address.zip_code, user_id: Faker::Number.between(1, 30))
+end
