@@ -38,7 +38,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 5em;
+  font-family: 'Fredericka the Great', cursive;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
@@ -75,6 +76,9 @@ p {
 #logo:hover {
   color: #fff;
   text-decoration: none;
+}
+.navbar-inverse{
+  background-color: #5F0C5B
 }
 
 /* footer */
@@ -154,6 +158,9 @@ aside {
   font-family: 'Calligraffitti', cursive;
   font-size: 40px
   }
+}
+.btn-primary{
+  background-color: #5F0C5B
 }
 
 
