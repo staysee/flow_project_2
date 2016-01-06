@@ -61,3 +61,10 @@ event2 = Event.create(
 30.times do
   Event.create(name: Faker::Hipster.word, event_type: "Workshop", description: Faker::Hipster.paragraph, street: Faker::Address.street_address, city: Faker::Address.city, state: Faker::Address.state_abbr, zip_code: Faker::Address.zip_code, user_id: Faker::Number.between(1, 30))
 end
+
+
+users = User.order(:created_at).take(6)
+50.times do
+  Post.create(body: Faker::Lorem.sentence(3), user_id: Faker::Number.between(1,6))
+end
+
