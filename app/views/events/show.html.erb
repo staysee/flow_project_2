@@ -1,2 +1,12 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+<h1><%= @event.name %></h1>
+
+<h3><%= @event.description %></h3>
+
+<h5>What:</h5><%= @event.event_type %>
+<h5>Where:</h5>
+<%= @event.street %>
+<%= @event.city %> <%= @event.state %> <%= @event.zip_code %>
+
+<h5>Contact Event Host:</h5>
+<%= @event.user.name %>
+<%= @event.user.email %>

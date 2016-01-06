@@ -1,13 +1,13 @@
 <% provide(:title, "Home") %>
 
 <div class="center jumbotron">
-<h1>Welcome to Flow Finder</h1>
+<h1>Flow Finder</h1>
 
-<p> This is the home page for Flow Finder </p>
+<p> move it to the rhythm, groove with the flow</p>
 
 
 <% if logged_in? %>
-  <%= link_to "Log out", destroy_session_path %>
+  <%= link_to "Let's dance", posts_path %>
 <% else %>
    <%= link_to 'Register', new_user_path, {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#myModal', :class => "btn btn-primary btn-lg", 'data-type' => "html" } %>
    <%= link_to 'Log In', new_session_path, :class => "btn btn-primary btn-lg"  %>

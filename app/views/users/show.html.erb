@@ -22,8 +22,11 @@
       <h3>Posts (<%= @user.posts.count %>)</h3>
       <ol class="posts">
         <% @user.posts.each do |post| %>
-          <%= image_tag post.image_url %>
-          <%= post.body %>
+          <div>
+            <%= image_tag post.image_url %>
+            <%= post.body %>
+            <%= post.created_at %>
+          </div>
         <% end %>
 
       </ol>

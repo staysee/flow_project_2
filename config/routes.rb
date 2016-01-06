@@ -47,4 +47,10 @@ Rails.application.routes.draw do
     resources :events, only:[:index, :show]
   end
 
+
+  # POSTS ROUTES
+  get 'posts/' => 'posts#index', as: :posts
+
+
+
 end
