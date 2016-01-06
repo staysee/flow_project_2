@@ -1,4 +1,6 @@
+
 module API
+
   class EventsController < ApplicationController
 
     def index
