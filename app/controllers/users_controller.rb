@@ -13,8 +13,8 @@ class UsersController < ApplicationController
     if @user.save
       #auto sign in
       log_in @user
-      flash[:sucess] = 'Welcome to Flow Finder!'
-      redirect_to user_path
+      flash[:success] = 'Welcome to Flow Finder!'
+      redirect_to root_path
     else
       # flash[:error] = 'Registration Fail: Please make sure all fields are entered correctly.'
       # redirect_to new_user_path

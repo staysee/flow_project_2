@@ -6,16 +6,9 @@
 <p> This is the home page for Flow Finder </p>
 
 
-<% flash.each do |key,value|  %>
-    <div class="<%= key %>" > <%= value %> </div>
-<% end %>
-
-
-<% if current_user  %>
-  <%=link_to "My Profile Page", user_path %>
-  <%= link_to "Logout", destroy_session_path %>
+<% if logged_in? %>
+  <%= link_to "Log out", destroy_session_path %>
 <% else %>
    <%= link_to 'Register', new_user_path, {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#myModal', :class => "btn btn-primary btn-lg", 'data-type' => "html" } %>
    <%= link_to 'Log In', new_session_path, :class => "btn btn-primary btn-lg"  %>
 <% end %>
-
