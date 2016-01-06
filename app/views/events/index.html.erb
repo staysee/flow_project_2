@@ -1,6 +1,8 @@
 <h1>Flow Events</h1>
 <p> Here are a list of all classes, workshops, spin jams, or festivals posted by your flow community! </p>
 
+<%= will_paginate %>
+
 <ul class="events">
   <% @events.each do |event| %>
     <li>
@@ -8,3 +10,5 @@
     </li>
   <% end %>
 </ul>
+
+<%= will_paginate %>
