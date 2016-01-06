@@ -1,5 +1,6 @@
 <div class="row">
   <aside class="col-md-4">
+
     <section class="user_info">
       <%= image_tag @user.profile_image_url, id: 'profile-image', style: 'max-width: 300px; height: auto' %>
         <h2><%= @user.handle %></h2>
@@ -13,6 +14,18 @@
           <li><%=event.name%></li>
         <% end %>
     </section>
+
   </aside>
+
+  <div class="col-md-8">
+    <% if @user.posts.any? %>
+      <h3>Posts (<%= @user.posts.count %>)</h3>
+      <ol class="microposts">
+        <%= render @posts %>
+      </ol>
+      <%= will_paginate @posts %>
+    <% end %>
+  </div>
 </div>
+
 
