@@ -1,0 +1,23 @@
+en:
+  faker:
+    prop: ["hoop", "poi", "staff", "fans"]
+
+    event:
+      type: ["Class", "Jam", "Workshop", "Festival"]
+      class: ["Light it Up", "Intermediate Poi", "Fire Fans", "Off-Body Tricks", "Advanced Hooping"]
+      jam: ["Spin Jam", "Glow Flow", "Flow Jam", "Fire it Up"]
+      workshop: ["Breaks & Paddles", "Angles", "Isolations", "Doubles"]
+
+    festival:
+      name: ["Coachella", "Lightning in a Bottle", "Burning Man", "Hoop Path", "Woogie Weekend"]
+
+    tag:
+      hoop: ["hoop", "hooplife", "showmeyourtrails", "flow", "hoopspam", "firehoop", "flowarts", "firedance"]
+      poi: ["poi", "showmeyourtrails", "flow", "flowarts", "firepoi", "firedance"]
+      staff: ["staff", "showmeyourtrails", "flow", "flowarts", "contactstaff", "firedance"]
+      fans: ["fans", "firefans", "firedance", "flow", "flowarts"]
+
+
+
+
+

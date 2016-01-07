@@ -20,7 +20,7 @@ class EventsController < ApplicationController
     @event.user = current_user
     if @event.save
       flash[:success] = 'Thanks for sharing your event'
-      redirect_to event_path
+      redirect_to event_path(@event)
     else
       flash.now[:error] = 'Event could not save. Try again'
       redirect_to new_event_path

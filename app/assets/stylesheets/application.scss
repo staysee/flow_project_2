@@ -12,6 +12,7 @@
 
 body {
   padding-top: 60px;
+  background: white;
 }
 
 section {
@@ -78,7 +79,7 @@ p {
   text-decoration: none;
 }
 .navbar-inverse{
-  background-color: #5F0C5B
+  background-color: #5F0C5B;
 }
 
 /* footer */
@@ -192,6 +193,18 @@ aside {
 }
 
 /* Posts */
+.square-post{
+  background-color: #EEEEEE;
+  border: 1px solid black;
+}
+.image-post{
+  width: 200px;
+  height: 250px;
+  margin: 35px;
+}
+.tags{
+  font-size: 10px;
+}
 
 
 

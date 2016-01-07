@@ -1,6 +1,7 @@
 <% provide(:title, 'Profile') %>
 
 <div class="row">
+  <!-- USER PROFILE INFO- SIDE BAR -->
   <aside class="col-md-4">
 
     <section class="user_info">
@@ -20,23 +21,24 @@
 
   </aside>
 
+<!-- MAIN PART OF USER PROFILE PAGE -->
   <div class="col-md-8">
     <% if @user == current_user %>
       <div class="row">
         <div class="post_form">
-          <%= render 'shared/post_form' %>
+          <%= render 'layouts/post_form' %>
         </div>
       </div>
     <% end %>
 
-
+    <div class="row">
     <% if @user.posts.any? %>
       <h3>my posts (<%= @user.posts.count %>)</h3>
-        <ol class="posts">
+        <!-- <ol class="col-sm-6"> -->
             <% @user.posts.each do |post| %>
-              <div>
+              <div class="col-xs-6 col-md-6">
                 <strong><%= post.title %></strong>
-                <%= image_tag post.image_url %>
+                <%= image_tag post.image_url, :class => "image-post" %>
                 <br />
                 <%= post.body %>
 
@@ -55,11 +57,10 @@
 
 
             <% end %>
-        </ol>
+        <!-- </ol> -->
 
     <% end %>
+    </div>
 
   </div>
 </div>
-
-
