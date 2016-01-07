@@ -1,0 +1,50 @@
+<%= form_for (@event) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+
+  <div class="field form-group">
+    <%= f.label :name, "Event Name" %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :event_type %>
+    <%= f.text_field :event_type, class: "form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :event_date %>
+    <%= f.date_field :event_date, class: "form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :event_time %>
+    <%= f.time_field :event_time, class: "form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :description %>
+    <%= f.text_field :description, class: "form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :street %>
+    <%= f.text_field :street, class: "form-control" %>
+  </div>
+
+  <div class="field form_group">
+    <%= f.label :city %>
+    <%= f.text_field :city, class: "form-control" %>
+  </div>
+
+  <div class="field form_group">
+    <%= f.label :state %>
+    <%= f.text_field :state, class: "form-control" %>
+  </div>
+
+  <div class="field form_group">
+    <%= f.label :zip_code %>
+    <%= f.text_field :zip_code, class: "form-control" %>
+  </div>
+
+  <%= f.submit "Update event", class: "btn btn-primary form-control" %>
+<% end %>
