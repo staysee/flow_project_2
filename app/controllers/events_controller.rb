@@ -27,10 +27,14 @@ class EventsController < ApplicationController
     end
   end
 
+  def edit
+    @event = Event.find(params[:id])
+  end
+
   def update
     @event = Event.find(params[:id])
     if @event.update_attributes(event_params)
-      flash[:success] = "Profile updated"
+      flash[:success] = "Event Updated"
       redirect_to event_path
     else
       render 'edit'
@@ -40,6 +44,7 @@ class EventsController < ApplicationController
   def destroy
     @event.destroy
     flash[:success] = "Event has been deleted."
+    redirect_to :back
   end
 
 

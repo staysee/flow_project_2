@@ -43,8 +43,15 @@ Rails.application.routes.draw do
   get 'events/new' => 'events#new', as: :new_event
   #create a new event
   post 'events/' => 'events#create'
-    #route to individual event page
+  #route to an event's page
   get 'events/:id' => 'events#show', as: :event
+  #route to edit event form
+  get 'events/:id/edit' => 'events#edit', as: :edit_event
+  #route to update event
+  patch 'events/:id' => 'events#update'
+  #route to delete events
+  delete 'events/:id' => 'events#destroy'
+
 
   namespace :api do
     resources :events, only:[:index, :show]
@@ -55,10 +62,10 @@ Rails.application.routes.draw do
   get 'posts/' => 'posts#index', as: :posts
   #create posts
   post 'posts/' => 'posts#create'
+  #route to posts
+  get 'posts/:id' => 'posts#show', as: :post
   #destroy posts
   delete 'posts/:id' => 'posts#destroy'
-  #
-  get 'posts/:id' => 'posts#show', as: :post
 
 
 end

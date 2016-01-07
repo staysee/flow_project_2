@@ -6,9 +6,15 @@
   <% if @user.events.any? %>
     <% @user.events.each do |event| %>
 
+      <div>
       <%= link_to event.name, event_path(event) %>
+      </div>
 
-      <%= link_to "delete event", event, method: :delete, data: { confirm: "Are you sure" } %>
+      <div>
+      <%= link_to "[edit]", edit_event_path(event) %>
+      <%= link_to "[delete]", event, method: :delete, data: { confirm: "Are you sure? Delete cannot be undone." } %>
+      </div>
+
     <% end %>
   <% end %>
 <% end %>
