@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#Paperclip
+gem 'paperclip'
 #Pagination
 gem 'will_paginate', '~> 3.0.7'
 #Pagination

@@ -21,8 +21,9 @@ Rails.application.routes.draw do
   #route to users show/profile page
   get 'users/:id' => 'users#show', as: :user
 
-  resources :users
-
+  resources :users do
+    resources :events
+  end
 
   # SESSIONS ROUTES
   #display form
