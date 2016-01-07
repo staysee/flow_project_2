@@ -18,7 +18,7 @@
   </aside>
 
   <div class="col-md-8">
-    <% if logged_in? %>
+    <% if @user == current_user %>
       <div class="row">
         <div class="post_form">
           <%= render 'shared/post_form' %>
@@ -29,19 +29,26 @@
 
     <% if @user.posts.any? %>
       <h3>my posts (<%= @user.posts.count %>)</h3>
-      <ol class="posts">
-        <% @user.posts.each do |post| %>
-          <div>
-            <%= image_tag post.image_url %>
-            <%= post.body %>
-          <div>
-            <%= post.created_at.strftime("%d %b. %Y") %>
-          </div>
-          </div>
-        <% end %>
-      </ol>
+        <ol class="posts">
+            <% @user.posts.each do |post| %>
+              <div>
+                <%= image_tag post.image_url %>
+                <%= post.body %>
+                <div>
+                  <%= post.created_at.strftime("%d %b. %Y") %>
+
+                  <% if @user == current_user %>
+                    <%= link_to "delete", post, method: :delete, data: { confirm: "Are you sure?" } %>
+                  <% end %>
+                </div>
+              </div>
+
+
+            <% end %>
+        </ol>
 
     <% end %>
+
   </div>
 </div>
 

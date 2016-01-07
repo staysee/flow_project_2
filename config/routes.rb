@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   get 'users/:id/edit' => 'users#edit', as: :edit_user
   #route to post user form to
   post '/' => 'users#create'
+  # user's event page
+  get 'users/:id/event' => 'users#show_event', as: :show_event
   #route to users show/profile page
   get 'users/:id' => 'users#show', as: :user
 
@@ -54,6 +56,8 @@ Rails.application.routes.draw do
   post 'posts/' => 'posts#create'
   #destroy posts
   delete 'posts/:id' => 'posts#destroy'
+  #
+  get 'posts/:id' => 'posts#show', as: :post
 
 
 end

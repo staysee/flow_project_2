@@ -45,6 +45,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def show_event
+    @user = User.find(params[:id])
+    @events = @user.events
+    render 'show_event'
+  end
 
 
 private

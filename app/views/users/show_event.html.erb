@@ -1,0 +1,12 @@
+<h1>Events I'm Sharing</h1>
+
+<% if @user == current_user %>
+  <% if @user.events.any? %>
+    <% @user.events.each do |event| %>
+
+      <%= link_to event.name, event_path(event) %>
+
+      <%= link_to "delete event", event, method: :delete, data: { confirm: "Are you sure" } %>
+    <% end %>
+  <% end %>
+<% end %>
