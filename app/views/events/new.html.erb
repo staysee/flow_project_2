@@ -5,7 +5,7 @@
     <%= form_for [@user, Event.new] do |f| %>
 
       <div class="field form-group">
-        <%= f.label :name %>
+        <%= f.label :name, "Event Name" %>
         <%= f.text_field :name, class: "form-control" %>
       </div>
 
@@ -20,23 +20,23 @@
       </div>
 
       <div class="field form-group">
-        <%= f.label :street%>
-        <%= f.email_field :street, class: "form-control" %>
+        <%= f.label :street %>
+        <%= f.text_field :street, class: "form-control" %>
       </div>
 
       <div class="field form_group">
         <%= f.label :city %>
-        <%= f.password_field :city, class: "form-control" %>
+        <%= f.text_field :city, class: "form-control" %>
       </div>
 
       <div class="field form_group">
-        <%= f.label :state, "Password" %>
-        <%= f.password_field :state, class: "form-control" %>
+        <%= f.label :state %>
+        <%= f.text_field :state, class: "form-control" %>
       </div>
 
       <div class="field form_group">
-        <%= f.label :zip_code, "Confirmation" %>
-        <%= f.password_field :zip_code, class: "form-control" %>
+        <%= f.label :zip_code %>
+        <%= f.text_field :zip_code, class: "form-control" %>
       </div>
 
       <%= f.submit "Share my event", class: "btn btn-primary form-control" %>
