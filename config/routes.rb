@@ -67,5 +67,8 @@ Rails.application.routes.draw do
   #destroy posts
   delete 'posts/:id' => 'posts#destroy'
 
+  #TAGS
+  get 'tags/:tag' => 'posts#index', as: :tag
+
 
 end

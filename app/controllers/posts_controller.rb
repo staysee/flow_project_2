@@ -3,7 +3,11 @@ class PostsController < ApplicationController
   before_action :correct_user, only: [:destroy]
 
   def index
-    @posts = Post.all
+    if params[:tag]
+      @posts = Post.tagged_with(params[:tag])
+    else
+      @posts = Post.all
+    end
   end
 
   def show
@@ -34,7 +38,7 @@ class PostsController < ApplicationController
 private
 
   def post_params
-    params.require(:post).permit(:body, :image_url)
+    params.require(:post).permit(:title, :body, :image_url, :all_tags)
   end
 
   #Confirms the correct user
