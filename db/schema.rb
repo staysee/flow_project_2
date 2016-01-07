@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20160106194434) do
   create_table "events", force: :cascade do |t|
     t.string   "name"
     t.string   "event_type"
+    t.string   "event_date"
+    t.string   "event_time"
     t.text     "description"
     t.string   "street"
     t.string   "city"
@@ -30,6 +32,7 @@ ActiveRecord::Schema.define(version: 20160106194434) do
   end
 
   create_table "posts", force: :cascade do |t|
+    t.string   "title"
     t.text     "body"
     t.string   "image_url"
     t.integer  "user_id"
@@ -43,6 +46,7 @@ ActiveRecord::Schema.define(version: 20160106194434) do
     t.string   "email"
     t.string   "password_digest"
     t.string   "profile_image_url"
+    t.string   "bio"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
