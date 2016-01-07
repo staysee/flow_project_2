@@ -59,7 +59,7 @@ event2 = Event.create(
   user_id: 2)
 
 30.times do
-  Event.create(name: Faker::Hipster.word, event_type: "Workshop", description: Faker::Hipster.paragraph, street: Faker::Address.street_address, city: Faker::Address.city, state: Faker::Address.state_abbr, zip_code: Faker::Address.zip_code, user_id: Faker::Number.between(1, 30))
+  Event.create(name: Faker::Hipster.word, event_type: "Workshop", description: Faker::Hipster.paragraph, street: Faker::Address.street_address, city: Faker::Address.city, state: Faker::Address.state_abbr, zip_code: Faker::Address.zip_code, user_id: Faker::Number.between(1, User.all.length))
 end
 
 

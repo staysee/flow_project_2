@@ -8,7 +8,12 @@ class PostsController < ApplicationController
   def show
   end
 
+  def new
+    @posts = Post.new
+  end
+
   def create
+
   end
 
   def destroy

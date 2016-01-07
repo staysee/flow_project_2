@@ -12,12 +12,12 @@ Rails.application.routes.draw do
   get 'users/' => 'users#index', as: :users
   #route to users sign up form
   get 'users/new' => 'users#new', as: :new_user
-  #route to users show/profile page
-  get 'users/:id' => 'users#show', as: :user
   #route to edit user
   get 'users/:id/edit' => 'users#edit', as: :edit_user
   #route to post user form to
   post '/' => 'users#create'
+  #route to users show/profile page
+  get 'users/:id' => 'users#show', as: :user
 
   resources :users
 
@@ -50,7 +50,10 @@ Rails.application.routes.draw do
 
   # POSTS ROUTES
   get 'posts/' => 'posts#index', as: :posts
-
+  #create posts
+  post 'posts/' => 'posts#create'
+  #destroy posts
+  delete 'posts/:id' => 'posts#destroy'
 
 
 end

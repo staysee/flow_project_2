@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   has_many :events
-  has_many :posts
+  has_many :posts, dependent: :destroy
 
   before_save { self.email = email.downcase }
 

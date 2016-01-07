@@ -18,17 +18,30 @@
   </aside>
 
   <div class="col-md-8">
+    <% if logged_in? %>
+      <div class="row">
+        <div class="post_form">
+          <%= render 'shared/post_form' %>
+        </div>
+      </div>
+    <% end %>
+
+
+
+
+
     <% if @user.posts.any? %>
-      <h3>Posts (<%= @user.posts.count %>)</h3>
+      <h3>my posts (<%= @user.posts.count %>)</h3>
       <ol class="posts">
         <% @user.posts.each do |post| %>
           <div>
             <%= image_tag post.image_url %>
             <%= post.body %>
-            <%= post.created_at %>
+          <div>
+            <%= post.created_at.strftime("%d %b. %Y") %>
+          </div>
           </div>
         <% end %>
-
       </ol>
 
     <% end %>
