@@ -8,12 +8,13 @@
         <h2><%= @user.handle %></h2>
         <h3><%= @user.name %></h3>
         <h5><%= @user.email %></h5>
+        <p><%= @user.bio %></p>
     </section>
 
     <section class="user_events">
       <h5>Check out these events!</h5>
         <% @user.events.each do |event| %>
-          <li><%=event.name%></li>
+          <li><%= link_to event.name, event_path(event) %></li>
         <% end %>
     </section>
 
