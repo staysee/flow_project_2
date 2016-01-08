@@ -224,10 +224,15 @@ aside {
   font-size: 18px;
 }
 
-.event-table a{
+.event-table {
+  a{
     color: #F14F9F;
     font-size: 14px;
     font-weight: bold;
+  }
+  td{
+    font-weight: bold;
+  }
 }
 
 /* Posts */

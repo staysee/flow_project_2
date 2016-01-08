@@ -1,5 +1,5 @@
 <% provide(:title, 'Feed') %>
-<h1>All Users' Posts can go here</h1>
+<h1>Flow Gallery</h1>
 
 <div class="row">
   <% @posts.each do |post| %>
@@ -17,7 +17,7 @@
 </div>
 
 <div class="tags-cloud glassy-bg">
-  <h5>Tags Cloud</h5>
+  <h5>Search by Tags</h5>
   <% tag_cloud Tag.counts, %w{css1 css2 css3 css4} do |tag, css_class| %>
     <%= link_to tag.name, tag_path(tag.name), class: css_class %>
   <% end %>

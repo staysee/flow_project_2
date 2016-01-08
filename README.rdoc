@@ -1,28 +1,52 @@
-== README
+<h1>Flow Finder</h1>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<h2> Hoop dance. Poi. Staff. Fire Fans. Fire dance</h2>
 
-Things you may want to cover:
+<h3>About</h3>
+<p>
+ Flow Finder was built to create a space for flow artists (and those interested in flow arts) where they can search for any workshops, classes, jams, or festivals happening in their area. The flow arts is relatively new so there aren't many areas with a large flow community. A person would have to specifically search the internet for classes in hoop, poi, fans, staff, etc. and find a lack of classes.
+</p>
+<p>
+  On Flow Finder, a user will be able to post any event they are hosting so other users can search by prop, location, or type of event. They will also be able to make a post onto their Profile Page with text, images, and add tags. All users' posts can be viewed from the feed to see what's going on with Flow Artists all over the world!
+</p>
 
-* Ruby version
+<h3>Built with</h3>
 
-* System dependencies
+  <li>Rails</li>
+  <li>Ruby</li>
+  <li>HTML</li>
+  <li>CSS (Bootstrap)</li>
+  <li>jQuery</li>
 
-* Configuration
+<h4>Models</h4>
+  <p>Currently there are 5 models:</p>
+    <li>User</li>
+    <li>Event</li>
+    <li>Posts</li>
+    <li>Tagging</li>
+    <li>Tag</li>
 
-* Database creation
+<h4>Gems Added</h4>
+  <li>Bootstrap</li>
+  <li>Faker</li>
+  <li>Will Paginate</li>
+  <li>Paperclip</li>
 
-* Database initialization
+<h4>Problems / Future Additions</h4>
+  <p>I ran into a lot of errors at the beginning of this project so I couldnt' get all the features I wanted into this project yet.</p>
+  <p>Ideas for future additions:</p>
+    <li>A lot of styling...</li>
+    <li>Search by user, event, location,etc. </li>
+    <li>Sort function</li>
+    <li>Post video/short clip</li>
+    <li>"Friend" another user</li>
+    <li>Users can create/join groups for jams...or add/join events</li>
+    <li>A studio/event organizer can log in and have different features or profile page than regular users</li>
+    <li>An Administrator User</li>
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+<h4>Links</h4>
+  <li><a href='https://github.com/staysee/flow_project_2'>GitHub</a></li>
+  <li><a href='https://trello.com/b/HZeznM00/project-2-flow-app'>Trello Board</a></li>
+  <li><a href='https://flow-finder.herokuapp.com/'>Heroku</a></li>
