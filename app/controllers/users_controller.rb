@@ -19,9 +19,9 @@ class UsersController < ApplicationController
       flash[:success] = 'Welcome to Flow Finder!'
       redirect_to root_path
     else
-      # flash[:error] = 'Registration Fail: Please make sure all fields are entered correctly.'
+      flash[:error] = 'Registration Fail: Please make sure all fields are entered correctly.'
       # redirect_to new_user_path
-      render 'new'
+      redirect_to root_path
     end
   end
 

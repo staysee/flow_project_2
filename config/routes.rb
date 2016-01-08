@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   #route to edit user
   get 'users/:id/edit' => 'users#edit', as: :edit_user
   #route to post user form to
-  post '/' => 'users#create'
+  post '/' => 'users#create', as: :create_user
   # user's event page
   get 'users/:id/event' => 'users#show_event', as: :show_event
   #route to users show/profile page

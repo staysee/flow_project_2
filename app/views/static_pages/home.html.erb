@@ -9,7 +9,8 @@
   <% if logged_in? %>
     <%= link_to "d a n c e", posts_path %>
   <% else %>
-     <%= link_to 'Register', new_user_path, {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#myModal', :class => "btn btn-primary btn-lg", 'data-type' => "html" } %>
-     <%= link_to 'Log In', new_session_path, :class => "btn btn-primary btn-lg"  %>
+     <%= link_to 'Register', new_user_path, {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#myModal', :class => "btn btn-primary btn-lg", 'data-type' => "html", id: "register_link"} %>
+
+     <%= link_to 'Log In', new_session_path, {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#myModal', :class => "btn btn-primary btn-lg", 'data-type' => "html", id: "login_link"} %>
   <% end %>
 </div>

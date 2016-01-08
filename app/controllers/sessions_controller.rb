@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
       #redirect back to the page
       flash.now[:danger] = 'Invalid email/password combination'
 
-      redirect_to new_session_path
+      redirect_to root_path
     end
   end
 

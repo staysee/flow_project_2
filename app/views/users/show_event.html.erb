@@ -2,19 +2,35 @@
 
 <h1>Events I'm Sharing</h1>
 
-<% if @user == current_user %>
-  <% if @user.events.any? %>
-    <% @user.events.each do |event| %>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
 
-      <div>
-      <%= link_to event.name, event_path(event) %>
-      </div>
+    <table class="table">
+      <tr>
+        <th class="col-md-3">Date</th>
+        <th class="col-md-4">Event</th>
+        <th class="col-md-3">Type</th>
+        <th class="col-md-1">Edit</th>
+        <th class="col-md-1">Delete</th>
+      </tr>
 
-      <div>
-      <%= link_to "[edit]", edit_event_path(event) %>
-      <%= link_to "[delete]", event, method: :delete, data: { confirm: "Are you sure? Delete cannot be undone." } %>
-      </div>
+    <% if @user == current_user %>
+      <% if @user.events.any? %>
+        <% @user.events.each do |event| %>
 
+          <tr>
+            <td><%= event.event_date %></td>
+            <td><%= link_to event.name, event_path(event) %></td>
+            <td><%= event.event_type %></td>
+            <td><%= link_to "[edit]", edit_event_path(event) %></td>
+            <td><%= link_to "[delete]", event, method: :delete, data: { confirm: "Are you sure? Delete cannot be undone." } %></td>
+          </tr>
+
+        <% end %>
+      <% end %>
     <% end %>
-  <% end %>
-<% end %>
+
+    </table>
+
+  </div>
+</div>

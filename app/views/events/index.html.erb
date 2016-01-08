@@ -5,12 +5,27 @@
 
 <%= will_paginate %>
 
-<ul class="events">
+<table class="table">
+    <tr>
+      <th class="col-md-2">Date</th>
+      <th class="col-md-4">Event</th>
+      <th class="col-md-3">Type</th>
+      <th class="col-md-2">City</th>
+      <th class="col-md-1">State</th>
+    </tr>
+
   <% @events.each do |event| %>
-    <li>
-      <%= link_to event.name, event %>
-    </li>
+
+    <tr>
+      <td><%= event.event_date %></td>
+      <td><%= link_to event.name, event %></td>
+      <td><%= event.event_type %></td>
+      <td><%= event.city %></td>
+      <td><%= event.state %></td>
+    </tr>
   <% end %>
-</ul>
+
+</table>
+
 
 <%= will_paginate %>
