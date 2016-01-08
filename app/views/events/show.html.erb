@@ -4,12 +4,20 @@
 
 <h3><%= @event.description %></h3>
 
-<h5>What:</h5><%= @event.event_type %>
-<h5>When:</h5><%= @event.event_date %> <%= @event.event_time %>
-<h5>Where:</h5>
-<%= @event.street %>
-<%= @event.city %> <%= @event.state %> <%= @event.zip_code %>
+<div class="event-row">
+  <div class="col-md-4 col-md-offset-4">
 
-<h5>Contact Event Host:</h5>
-<%= @event.user.name %>
-<%= @event.user.email %>
+    <p>What: <%= @event.event_type %></p>
+    <p>When: <%= @event.event_date %> <%= @event.event_time %></p>
+    <p>Where: <%= @event.street %> <%= @event.city %> <%= @event.state %> <%= @event.zip_code %></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-3 col-md-offset-2">
+    <h4>Contact Event Host:</h4>
+      <%= @event.user.name %>
+      <br />
+      <%= @event.user.email %>
+  </div>
+</div>

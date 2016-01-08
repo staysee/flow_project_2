@@ -13,6 +13,10 @@
       <%= f.label :handle %>
       <%= f.text_field :handle, class: 'form-control' %>
 
+      <%= f.label :profile_image_url %>
+      <%= f.text_field :profile_image_url, class: "form-control" %>
+
+
       <%= f.label :email %>
       <%= f.email_field :email, class: 'form-control' %>
 
@@ -21,6 +25,8 @@
 
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+
 
       <%= f.submit "Save changes", class: "btn btn-primary" %>
     <% end %>

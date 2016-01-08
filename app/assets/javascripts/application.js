@@ -19,4 +19,16 @@
 
 $(document).on('ready page:load', function(){
 
+  $('#register_link').click(function(){
+    $('#login_form').hide();
+    $('#myModal').modal();
+    return false;
+  });
+
+  $('#login_link').click(function(){
+    $('#registration_form').hide();
+    $('#myModal').modal();
+    return false;
+  });
+
 });

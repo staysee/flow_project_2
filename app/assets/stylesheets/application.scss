@@ -12,7 +12,7 @@
 
 body {
   padding-top: 60px;
-  background: white;
+  background: url("http://www.freecreatives.com/wp-content/uploads/2015/04/natural-paper-background-texture-hd-5a0b.jpg") no-repeat center center fixed;
 }
 
 section {
@@ -31,6 +31,9 @@ textarea {
   margin-bottom: 10px;
 }
 
+a{
+  color: Indigo;
+}
 
 /* typography */
 
@@ -44,6 +47,7 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  color: Purple;
 }
 
 h2 {
@@ -53,6 +57,10 @@ h2 {
   text-align: center;
   font-weight: normal;
   color: #777;
+}
+
+h3{
+  text-align: center;
 }
 
 p {
@@ -151,6 +159,8 @@ aside {
 /* Homepage - Static home */
 
 .jumbotron{
+  margin-top: 50px;
+
   h1{
     font-family: 'Fredericka the Great', cursive;
     font-size: 80px
@@ -164,6 +174,7 @@ aside {
     color: #F14F9F
   }
 }
+
 .btn-primary{
   background-color: #5F0C5B
 }
@@ -179,8 +190,25 @@ aside {
     padding: 10px 0;
     border-bottom: 1px solid $gray-lighter;
   }
+  a{
+    font-size: 18px;
+    font-weight: bold;
+  }
 }
 
+.user_info{
+  color: Purple;
+
+  h2{
+    font-size: 20px;
+    color: Purple;
+  }
+}
+
+.user_events{
+  font-size: 16px;
+  font-weight: bold;
+}
 /* Events index */
 .events {
   list-style: none;
@@ -190,6 +218,16 @@ aside {
     padding: 10px 0;
     border-bottom: 1px solid $gray-lighter;
   }
+}
+
+.event-row{
+  font-size: 18px;
+}
+
+.event-table a{
+    color: #F14F9F;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 /* Posts */
