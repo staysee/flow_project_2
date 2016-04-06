@@ -1,50 +1,46 @@
 #Flow Finder
 
-##Hoop dance. Poi. Staff. Fire Fans. Fire dance
+##::move it to the rhythm - groove with the flow:: 
+Hoop. Poi. Staff. Fire Fans
 
 ###About
+Flow Finder was built to create a space for flow artists (and those interested in flow arts) where they can search for workshops, classes, jams, or festivals happening in their area. Flow Arts is relatively new so there aren't many areas with a large flow community. A person would have to search the internet for classes specifically in hoop, poi, fans, staff, etc. Many areas may not even offer these types of classes.
 
-Flow Finder was built to create a space for flow artists (and those interested in flow arts) where they can search for any workshops, classes, jams, or festivals happening in their area. The flow arts is relatively new so there aren't many areas with a large flow community. A person would have to specifically search the internet for classes in hoop, poi, fans, staff, etc. and find a lack of classes.
+On Flow Finder, a user will be able to share an event they are hosting by posting to the Events page. Users can search by prop, location, or type of event. Each user has their own profile page where they can create posts and add tags (for searching other posts with the same tag). Users can look through all posts in a gallery to see what's going on with flow artists all over the world!
 
-On Flow Finder, a user will be able to post any event they are hosting so other users can search by prop, location, or type of event. They will also be able to make a post onto their Profile Page with text, images, and add tags. All users' posts can be viewed from the feed to see what's going on with Flow Artists all over the world!
+###Flow Finder is Built With:
 
-###Built with:
+* **Technologies Used:**
+ * Rails  
+ * Ruby
+ * HTML
+ * CSS
+ * jQuery
 
-- Rails
-- Ruby
-- HTML
-- CSS
-- jQuery
+* **Models**  
+	1. User
+	2. Event
+	3. Post
+	4. Tag
+	5. Tagging
 
-###Models
-Currently there are 5 models:
-- User
-- Event
-- Posts
-- Tagging
-- Tag
+* **Gems Added**
+ * Bootstrap
+ * Faker
+ * Will Paginate
+ * Paperclip
 
-###Gems Added
-- Bootstrap
-- Faker
-- Will Paginate
-- Paperclip
+###Future Additions:
+* Search functions - by user, event, location, prop
+* Sort function - by user, event, location, prop
+* "Friend" another user
+* Create an Admin
+* A studio/event organizer to have different features or profile page than regular users
 
-####Current Problems I'm Working On
+###Current Problems I'm Working On
+[03.02.16] Still need to fix issue with "current user" being logged in/out. My app is working locally, but is running into issues on Heroku. Need to work on style/design overall.
 
-####Ideas for future additions:
-- A lot of styling...
-- Search by user, event, location,etc.
-- Sort function
-- Post video/short clip
-- "Friend" another user
-- Users can create/join groups for jams...or add/join events
-- A studio/event organizer can log in and have different features or profile page than regular users
-- An Administrator User
-
-
-
-####Links
-- GitHub: https://github.com/staysee/flow_project_2
-- Trello: https://trello.com/b/HZeznM00/project-2-flow-app
-- Heroku: https://flow-finder.herokuapp.com/
+#####Links
+* [GitHub] (https://github.com/staysee/flow_project_2)
+- [Trello] (https://trello.com/b/HZeznM00/project-2-flow-app)
+- [Heroku] (https://flow-finder.herokuapp.com/)
