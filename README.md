@@ -41,6 +41,6 @@ On Flow Finder, a user will be able to share an event they are hosting by postin
 [03.02.16] Still need to fix issue with "current user" being logged in/out. My app is working locally, but is running into issues on Heroku. Need to work on style/design overall.
 
 #####Links
-* [GitHub] (https://github.com/staysee/flow_project_2)
-- [Trello] (https://trello.com/b/HZeznM00/project-2-flow-app)
-- [Heroku] (https://flow-finder.herokuapp.com/)
+* [GitHub](https://github.com/staysee/flow_project_2)
+- [Trello](https://trello.com/b/HZeznM00/project-2-flow-app)
+- [Flow-Finder on Heroku](https://flow-finder.herokuapp.com/)
