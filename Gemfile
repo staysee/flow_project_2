@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'pg', :group => :production
 #Paperclip
 gem 'paperclip'
 #Pagination
