@@ -3,7 +3,7 @@
 
 <div class="row">
   <% @posts.each do |post| %>
-    <div class="col-xs-6 col-md-4">
+    <div class="gallery_image col-xs-6 col-md-4">
       <%= image_tag post.image_url %>
       <%= post.body %>
       <div><%= link_to post.user.handle, user_path(post.user) %></div>
