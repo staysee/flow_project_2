@@ -71,7 +71,7 @@ end
 
 
 # users = User.order(:created_at).take(6)
-30.times do
-  Post.create(title: Faker::Book.title, body: Faker::Lorem.paragraph, user_id: Faker::Number.between(1, User.all.length))
-end
+# 30.times do
+#   Post.create(title: Faker::Book.title, body: Faker::Lorem.paragraph, user_id: Faker::Number.between(1, User.all.length))
+# end
 
