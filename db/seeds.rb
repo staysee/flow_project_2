@@ -36,7 +36,7 @@ mabel = User.create(
   bio: "I love fire"
   )
 
-47.times do
+20.times do
   User.create(name: Faker::Name.name, handle: Faker::Internet.user_name, email: Faker::Internet.free_email, password: "password", password_confirmation: "password", profile_image_url: Faker::Avatar.image, bio: "Hi there! Flow with me!")
 end
 
