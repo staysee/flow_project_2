@@ -12,7 +12,6 @@
 
 body {
   padding-top: 60px;
-  background: url("http://www.freecreatives.com/wp-content/uploads/2015/04/natural-paper-background-texture-hd-5a0b.jpg") no-repeat center center fixed;
 }
 
 section {
@@ -50,13 +49,12 @@ h1 {
   color: Purple;
 }
 
-h2 {
-  font-size: 1.2em;
-  letter-spacing: -1px;
-  text-align: center;
-  font-weight: normal;
-  color: #777;
-}
+// h2 {
+//   font-size: 1.2em;
+//   letter-spacing: -1px;
+//   text-align: center;
+//   font-weight: normal;
+// }
 
 h3{
   text-align: center;
@@ -121,35 +119,6 @@ footer ul li {
 }
 
 
-/* profile_page */
-.profileNav{
-  float: left;
-  display: inline-block;
-  border: 2px solid red;
-
-  #profile-image {
-    border-radius: 20px;
-    max-width: 200px;
-    max-height: 300px;
-    border: 2px solid red;
-  }
-
-  .user_info{
-    h2{
-      border: 2px solid red;
-    }
-    p {
-      text-align: center;
-      border: 2px solid red;
-    }
-  }
-}
-
-.profileMain{
-  float: right;
-}
-
-
 /* Homepage - Static home */
 
 .jumbotron{
@@ -175,7 +144,59 @@ footer ul li {
 }
 
 
-/* Users index */
+/* Users Views */
+
+/* profile_page */
+.profileNav{
+  float: left;
+  display: inline-block;
+  border: 1px solid red;
+
+  .user_image{
+    max-width: 200px;
+    max-height: 300px;
+    margin: 0 auto;
+  }
+
+  #profile-image {
+    border-radius: 20px;
+    max-width: 200px;
+    max-height: 300px;
+    border: 1px solid red;
+  }
+
+  .user_info{
+    h2{
+      text-align: center;
+      margin-top: 0px;
+      color: #3C0882;
+      border: 1px solid red;
+    }
+    p {
+      text-align: justify;
+      font-size: 12px;
+      border: 1px solid red;
+    }
+  }
+
+  .user_events{
+    font-size: 16px;
+    font-weight: bold;
+    li{
+      list-style: none;
+    }
+    a{
+      color: #8d42a9;
+    }
+  }
+}
+
+.profileMain{
+  float: right;
+  border: 1px solid blue;
+}
+
+
 
 .users {
   list-style: none;
@@ -191,19 +212,9 @@ footer ul li {
   }
 }
 
-.user_info{
-  color: Purple;
 
-  h2{
-    font-size: 20px;
-    color: Purple;
-  }
-}
 
-.user_events{
-  font-size: 16px;
-  font-weight: bold;
-}
+
 /* Events index */
 .events {
   list-style: none;

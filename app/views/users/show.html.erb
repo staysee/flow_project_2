@@ -6,9 +6,11 @@
   <div class="profileNav col-md-4">
 
     <div class="user_info">
-      <%= image_tag @user.profile_image_url, id: 'profile-image' %>
-        <h2><%= @user.handle %></h2>
-        <p><%= @user.bio %></p>
+      <div class="user_image">
+        <%= image_tag @user.profile_image_url, id: 'profile-image' %>
+      </div>
+      <h2><%= @user.handle %></h2>
+      <p><%= @user.bio %></p>
     </div>
 
     <div class="user_events">
